@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react';
 
 export default function useDarkMode() {
   const [isDark, setIsDark] = useState(() => {
+    // Only access localStorage on client side
+    if (typeof window === 'undefined') {
+      return false; // Default for SSR
+    }
+    
     // Check localStorage first
     const saved = localStorage.getItem('elsewhere-dark-mode');
     if (saved !== null) {
@@ -9,7 +14,7 @@ export default function useDarkMode() {
     }
     
     // Otherwise, check system preference
-    if (typeof window !== 'undefined' && window.matchMedia) {
+    if (window.matchMedia) {
       return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
     
