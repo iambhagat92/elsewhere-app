@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 <p className="mt-2">
-                  Email: <a href="mailto:hello@elsewhere.app" className="text-primary hover:text-blue-400">hello@elsewhere.app</a>
+                  Email: <a href="mailto:bhagatpaaji@gmail.com" className="text-primary hover:text-blue-400">bhagatpaaji@gmail.com</a>
                 </p>
               </section>
             </div>

@@ -241,7 +241,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 💬 Support
 
 For questions or support:
-- Email: hello@elsewhere.app
+- Email: bhagatpaaji@gmail.com
 - GitHub Issues: [Create an issue](https://github.com/yourusername/elsewhere-app/issues)
 
 ## 🙏 Acknowledgments

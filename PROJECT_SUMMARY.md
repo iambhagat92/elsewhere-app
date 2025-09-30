@@ -329,7 +329,8 @@ Ready to launch? Follow this:
 - **Documentation**: README.md (comprehensive)
 - **Quick Start**: QUICKSTART.md (5-minute setup)
 - **Audio Guide**: public/README.md (audio requirements)
-- **Contact**: hello@elsewhere.app
+- **Contact**: bhagatpaaji@gmail.com
+m
 
 ---
 

@@ -238,7 +238,7 @@ Your ElseWhere MVP is ready to launch!
 
 ## 🆘 Need Help?
 
-- **Email**: hello@elsewhere.app
+- **Email**: bhagatpaaji@gmail.com
 - **GitHub Issues**: Create an issue in your repo
 - **Documentation**: Check main README.md
 
