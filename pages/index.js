@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
+import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
 import { locations } from '../data/locations';
 import LocationSelector from '../components/LocationSelector';
 import AudioControls from '../components/AudioControls';
 import AtmosphereOverlay from '../components/AtmosphereOverlay';
+import ShareButton from '../components/ShareButton';
+import Timer from '../components/Timer';
+import KeyboardShortcutsInfo from '../components/KeyboardShortcutsInfo';
 import Footer from '../components/Footer';
 
 /**
@@ -21,7 +25,21 @@ export default function Home() {
     setVolume,
     togglePlay,
     changeLocation,
+    pause,
   } = useAudioPlayer();
+
+  // Keyboard shortcuts
+  useKeyboardShortcuts({
+    onTogglePlay: togglePlay,
+    onVolumeUp: () => setVolume(Math.min(100, volume + 5)),
+    onVolumeDown: () => setVolume(Math.max(0, volume - 5)),
+    onSelectLocation: (index) => {
+      if (locations[index]) {
+        changeLocation(locations[index]);
+      }
+    },
+    isPlaying,
+  });
 
   return (
     <>
@@ -105,6 +123,11 @@ export default function Home() {
             <p className="text-sm md:text-base text-textSecondary max-w-xl mx-auto">
               Authentic ambient sounds to help you focus, study, work, or relax
             </p>
+            
+            {/* Share Button */}
+            <div className="flex justify-center mt-6">
+              <ShareButton currentLocation={currentLocation} />
+            </div>
           </header>
 
           {/* Error message */}
@@ -132,6 +155,9 @@ export default function Home() {
             onVolumeChange={setVolume}
             disabled={!currentLocation}
           />
+
+          {/* Focus Timer */}
+          <Timer onTimerEnd={pause} />
 
           {/* Features Section */}
           <section className="max-w-6xl mx-auto px-4 py-16">
@@ -221,6 +247,9 @@ export default function Home() {
             </div>
           </section>
         </main>
+
+        {/* Keyboard Shortcuts Info */}
+        <KeyboardShortcutsInfo />
 
         {/* Footer */}
         <Footer />
