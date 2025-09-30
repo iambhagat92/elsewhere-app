@@ -1,8 +1,10 @@
+import AudioVisualizer from './AudioVisualizer';
+
 /**
  * Audio controls component with play/pause button and volume slider
  * Fully accessible with ARIA labels and keyboard navigation
  */
-const AudioControls = ({ 
+const AudioControls = ({
   isPlaying, 
   isLoading, 
   volume, 
@@ -40,6 +42,11 @@ const AudioControls = ({
               '▶'
             )}
           </button>
+        </div>
+
+        {/* Audio Visualizer */}
+        <div className="flex justify-center mb-4">
+          <AudioVisualizer isPlaying={isPlaying && !isLoading} />
         </div>
 
         {/* Status Text */}
