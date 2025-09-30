@@ -11,6 +11,7 @@ import ShareButton from '../components/ShareButton';
 import Timer from '../components/Timer';
 import KeyboardShortcutsInfo from '../components/KeyboardShortcutsInfo';
 import DarkModeToggle from '../components/DarkModeToggle';
+import MixCities from '../components/MixCities';
 import Footer from '../components/Footer';
 
 /**
@@ -32,6 +33,9 @@ export default function Home() {
 
   // Dark mode
   const [isDark, toggleDarkMode] = useDarkMode();
+
+  // Mix Cities modal state
+  const [isMixOpen, setIsMixOpen] = useState(false);
 
   // Keyboard shortcuts
   useKeyboardShortcuts({
@@ -132,9 +136,17 @@ export default function Home() {
               Authentic ambient sounds to help you focus, study, work, or relax
             </p>
             
-            {/* Share Button */}
-            <div className="flex justify-center mt-6">
+            {/* Share Button & Mix Cities Button */}
+            <div className="flex justify-center gap-3 mt-6">
               <ShareButton currentLocation={currentLocation} />
+              <button
+                onClick={() => setIsMixOpen(true)}
+                className="glass px-6 py-3 rounded-xl font-semibold text-textPrimary dark:text-textPrimary-dark 
+                         hover:bg-primary hover:text-white transition-all duration-300 shadow-lg"
+                aria-label="Open Mix Cities panel"
+              >
+                🎛️ Mix Cities
+              </button>
             </div>
           </header>
 
@@ -166,6 +178,12 @@ export default function Home() {
 
           {/* Focus Timer */}
           <Timer onTimerEnd={pause} />
+
+          {/* Mix Cities Modal */}
+          <MixCities 
+            isOpen={isMixOpen} 
+            onClose={() => setIsMixOpen(false)}
+          />
 
           {/* Features Section */}
           <section className="max-w-6xl mx-auto px-4 py-16">
