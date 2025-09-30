@@ -13,6 +13,7 @@ import KeyboardShortcutsInfo from '../components/KeyboardShortcutsInfo';
 import DarkModeToggle from '../components/DarkModeToggle';
 import MixCities from '../components/MixCities';
 import Footer from '../components/Footer';
+import NoSSR from '../components/NoSSR';
 
 /**
  * Main homepage for ElseWhere - Ambient Life Simulator
@@ -167,23 +168,29 @@ export default function Home() {
           />
 
           {/* Audio controls */}
-          <AudioControls
-            isPlaying={isPlaying}
-            isLoading={isLoading}
-            volume={volume}
-            onTogglePlay={togglePlay}
-            onVolumeChange={setVolume}
-            disabled={!currentLocation}
-          />
+          <NoSSR>
+            <AudioControls
+              isPlaying={isPlaying}
+              isLoading={isLoading}
+              volume={volume}
+              onTogglePlay={togglePlay}
+              onVolumeChange={setVolume}
+              disabled={!currentLocation}
+            />
+          </NoSSR>
 
           {/* Focus Timer */}
-          <Timer onTimerEnd={pause} />
+          <NoSSR>
+            <Timer onTimerEnd={pause} />
+          </NoSSR>
 
           {/* Mix Cities Modal */}
-          <MixCities 
-            isOpen={isMixOpen} 
-            onClose={() => setIsMixOpen(false)}
-          />
+          <NoSSR>
+            <MixCities 
+              isOpen={isMixOpen} 
+              onClose={() => setIsMixOpen(false)}
+            />
+          </NoSSR>
 
           {/* Features Section */}
           <section className="max-w-6xl mx-auto px-4 py-16">
