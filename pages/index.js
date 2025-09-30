@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
+import useDarkMode from '../hooks/useDarkMode';
 import { locations } from '../data/locations';
 import LocationSelector from '../components/LocationSelector';
 import AudioControls from '../components/AudioControls';
@@ -9,6 +10,7 @@ import AtmosphereOverlay from '../components/AtmosphereOverlay';
 import ShareButton from '../components/ShareButton';
 import Timer from '../components/Timer';
 import KeyboardShortcutsInfo from '../components/KeyboardShortcutsInfo';
+import DarkModeToggle from '../components/DarkModeToggle';
 import Footer from '../components/Footer';
 
 /**
@@ -27,6 +29,9 @@ export default function Home() {
     changeLocation,
     pause,
   } = useAudioPlayer();
+
+  // Dark mode
+  const [isDark, toggleDarkMode] = useDarkMode();
 
   // Keyboard shortcuts
   useKeyboardShortcuts({
@@ -105,6 +110,9 @@ export default function Home() {
           }}
         />
       </Head>
+
+      {/* Dark mode toggle */}
+      <DarkModeToggle isDark={isDark} toggle={toggleDarkMode} />
 
       {/* Atmospheric overlay */}
       <AtmosphereOverlay location={currentLocation} />

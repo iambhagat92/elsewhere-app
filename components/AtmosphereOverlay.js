@@ -54,15 +54,15 @@ const AtmosphereOverlay = ({ location }) => {
       />
 
       {/* Time of day indicator */}
-      <div className="absolute top-8 right-8 glass rounded-xl p-4 pointer-events-auto">
+      <div className="absolute top-20 right-4 md:top-8 md:right-8 glass rounded-xl p-4 pointer-events-auto">
         <div className="text-center">
-          <p className="text-xs text-textSecondary mb-1 uppercase tracking-wider">
+          <p className="text-xs text-textSecondary dark:text-textSecondary-dark mb-1 uppercase tracking-wider">
             {location.name}
           </p>
-          <p className="text-2xl font-mono font-bold text-textPrimary mb-1">
+          <p className="text-2xl font-mono font-bold text-textPrimary dark:text-textPrimary-dark mb-1">
             {currentTime?.time}
           </p>
-          <p className="text-xs text-textSecondary">
+          <p className="text-xs text-textSecondary dark:text-textSecondary-dark">
             {atmosphere.period}
           </p>
         </div>
