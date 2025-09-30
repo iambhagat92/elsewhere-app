@@ -1,0 +1,53 @@
+========================================
+   HOW TO RUN YOUR ELSEWHERE APP
+========================================
+
+SUPER SIMPLE - JUST 2 STEPS:
+
+Step 1: Double-click this file:
+   START_SERVER.bat
+
+   A black window will open showing:
+   "Ready in 5 seconds"
+   "Local: http://localhost:3000"
+   
+   KEEP THIS WINDOW OPEN!
+
+Step 2: Double-click this file:
+   OPEN_APP.html
+   
+   Your browser will open with the app!
+
+========================================
+
+THAT'S IT! 
+
+The app should now be running in your browser.
+
+If you see an error:
+1. Make sure START_SERVER.bat window is still open
+2. Wait 10 seconds after starting the server
+3. Try OPEN_APP.html again
+
+========================================
+
+To STOP the server:
+- Close the black window (START_SERVER.bat)
+
+To RESTART:
+- Close the black window
+- Double-click START_SERVER.bat again
+- Wait 10 seconds
+- Double-click OPEN_APP.html
+
+========================================
+
+MANUAL METHOD (if needed):
+
+1. Open PowerShell in this folder
+2. Type: npm run dev
+3. Press Enter
+4. Wait for "Ready" message
+5. Open browser to: http://localhost:3000
+
+========================================
