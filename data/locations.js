@@ -7,7 +7,7 @@ export const locations = [
     timezone: 'JST',
     utcOffset: 9,
     description: 'Experience the bustling energy of Tokyo streets',
-    // Using placeholder audio URLs - replace with actual audio files
+    // Audio files served from public folder
     audioUrl: '/audio/tokyo-ambient.mp3',
     coordinates: { lat: 35.6762, lng: 139.6503 },
     emoji: '🗼',
