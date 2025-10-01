@@ -53,14 +53,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a 
-                  href="/AUDIO_CREDITS.md"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  href="/audio-credits"
                   className="text-sm text-textSecondary dark:text-textSecondary-dark hover:text-primary transition-colors duration-200"
                 >
                   🎵 Audio Credits
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
