@@ -1,5 +1,11 @@
-# https://www.robotstxt.org/robotstxt.html
+# ElseWhere - Robots.txt
+# Allow all search engines to crawl the site
+
 User-agent: *
 Allow: /
 
-Sitemap: https://elsewhere.app/sitemap.xml
+# Sitemap location
+Sitemap: https://elsewhere-app.onrender.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
