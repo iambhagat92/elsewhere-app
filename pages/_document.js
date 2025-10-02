@@ -45,6 +45,24 @@ export default function Document() {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-5MTRKR5M1L"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5MTRKR5M1L', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+        
         {/* Structured Data for Google */}
         <script
           type="application/ld+json"
