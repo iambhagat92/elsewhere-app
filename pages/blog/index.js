@@ -94,11 +94,15 @@ export default function BlogIndex({ posts }) {
               >
                 {/* Feature Image */}
                 <div className="relative h-48 bg-gradient-to-br from-blue-500 to-indigo-600 overflow-hidden">
-                  {post.image ? (
+                  {post.image && post.image.trim() !== '' ? (
                     <img
                       src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center"><span class="text-6xl">🎵</span></div>';
+                      }}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">

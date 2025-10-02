@@ -5,7 +5,7 @@ date: "2025-10-03"
 author: "ElseWhere Team"
 category: "Productivity"
 tags: ["ambient sounds", "focus", "productivity", "study", "work from home"]
-image: "/images/blog/ambient-sounds-focus.jpg"
+image: ""
 slug: "best-ambient-sounds-for-focus-productivity"
 ---
 

@@ -134,12 +134,15 @@ export default function BlogPost({ post, relatedPosts }) {
           </div>
 
           {/* Feature Image */}
-          {post.image && (
+          {post.image && post.image.trim() !== '' && (
             <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={post.image}
                 alt={post.title}
                 className="w-full h-auto"
+                onError={(e) => {
+                  e.target.parentElement.style.display = 'none';
+                }}
               />
             </div>
           )}
@@ -231,11 +234,15 @@ export default function BlogPost({ post, relatedPosts }) {
                   className="group bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700"
                 >
                   <div className="relative h-40 bg-gradient-to-br from-blue-500 to-indigo-600">
-                    {relatedPost.image ? (
+                    {relatedPost.image && relatedPost.image.trim() !== '' ? (
                       <img
                         src={relatedPost.image}
                         alt={relatedPost.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-4xl">🎵</div>';
+                        }}
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-4xl">
