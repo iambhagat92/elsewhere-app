@@ -149,23 +149,25 @@ export default function BlogPost({ post, relatedPosts }) {
 
           {/* Content */}
           <div
-            className="prose prose-lg dark:prose-invert max-w-none
+            className="prose prose-xl dark:prose-invert max-w-none
               prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white prose-headings:tracking-tight
-              prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-8 prose-h1:leading-tight
-              prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:border-b prose-h2:border-slate-200 dark:prose-h2:border-slate-700 prose-h2:pb-3
-              prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8
-              prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold
+              prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-12 prose-h1:leading-tight prose-h1:font-extrabold
+              prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-16 prose-h2:border-b-2 prose-h2:border-blue-200 dark:prose-h2:border-blue-800 prose-h2:pb-4
+              prose-h3:text-2xl prose-h3:mb-5 prose-h3:mt-10 prose-h3:font-semibold
+              prose-h4:text-xl prose-h4:mb-4 prose-h4:mt-8 prose-h4:font-semibold
+              prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-p:leading-loose prose-p:mb-8 prose-p:text-lg
+              prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold prose-a:transition-colors
               prose-strong:text-slate-900 dark:prose-strong:text-white prose-strong:font-bold
-              prose-em:text-slate-600 dark:prose-em:text-slate-400
-              prose-code:text-blue-600 dark:prose-code:text-blue-400 prose-code:bg-blue-50 dark:prose-code:bg-blue-900/30 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
-              prose-pre:bg-slate-800 prose-pre:text-slate-100 prose-pre:rounded-xl prose-pre:p-6 prose-pre:my-6
-              prose-ul:text-slate-700 dark:prose-ul:text-slate-300 prose-ul:my-6 prose-ul:space-y-2
-              prose-ol:text-slate-700 dark:prose-ol:text-slate-300 prose-ol:my-6 prose-ol:space-y-2
-              prose-li:my-2
-              prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:text-slate-700 dark:prose-blockquote:text-slate-300 prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-6 prose-blockquote:italic
-              prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8
-              prose-hr:my-12 prose-hr:border-slate-200 dark:prose-hr:border-slate-700"
+              prose-em:text-slate-600 dark:prose-em:text-slate-400 prose-em:italic
+              prose-code:text-blue-600 dark:prose-code:text-blue-400 prose-code:bg-blue-50 dark:prose-code:bg-blue-900/30 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-base
+              prose-pre:bg-slate-800 prose-pre:text-slate-100 prose-pre:rounded-xl prose-pre:p-6 prose-pre:my-8 prose-pre:shadow-lg
+              prose-ul:text-slate-700 dark:prose-ul:text-slate-300 prose-ul:my-8 prose-ul:space-y-3 prose-ul:text-lg
+              prose-ol:text-slate-700 dark:prose-ol:text-slate-300 prose-ol:my-8 prose-ol:space-y-3 prose-ol:text-lg
+              prose-li:my-3 prose-li:leading-relaxed
+              prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:text-slate-700 dark:prose-blockquote:text-slate-300 prose-blockquote:pl-8 prose-blockquote:py-4 prose-blockquote:my-8 prose-blockquote:italic prose-blockquote:bg-blue-50 dark:prose-blockquote:bg-blue-900/20 prose-blockquote:rounded-r-lg
+              prose-img:rounded-xl prose-img:shadow-2xl prose-img:my-10
+              prose-hr:my-16 prose-hr:border-slate-200 dark:prose-hr:border-slate-700
+              first:prose-p:text-xl first:prose-p:font-medium first:prose-p:text-slate-800 dark:first:prose-p:text-slate-200"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
