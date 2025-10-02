@@ -19,6 +19,10 @@ export const useAudioPlayer = () => {
     audioRef.current = new Audio();
     audioRef.current.loop = true;
     audioRef.current.preload = 'auto';
+    // Improve seamless looping
+    audioRef.current.preservesPitch = false; // Better performance
+    audioRef.current.mozPreservesPitch = false; // Firefox
+    audioRef.current.webkitPreservesPitch = false; // Safari
 
     // Handle audio events
     const handleCanPlay = () => {

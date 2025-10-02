@@ -25,9 +25,25 @@ const Footer = () => {
           {/* Quick links */}
           <div>
             <h3 className="text-lg font-bold text-textPrimary dark:text-textPrimary-dark mb-3">
-              Legal
+              Resources
             </h3>
             <ul className="space-y-2">
+              <li>
+                <Link 
+                  href="/blog"
+                  className="text-sm text-textSecondary dark:text-textSecondary-dark hover:text-primary transition-colors duration-200"
+                >
+                  📝 Blog
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/audio-credits"
+                  className="text-sm text-textSecondary dark:text-textSecondary-dark hover:text-primary transition-colors duration-200"
+                >
+                  🎵 Audio Credits
+                </Link>
+              </li>
               <li>
                 <Link 
                   href="/privacy-policy"
@@ -50,14 +66,6 @@ const Footer = () => {
                   className="text-sm text-textSecondary dark:text-textSecondary-dark hover:text-primary transition-colors duration-200"
                 >
                   Disclaimer
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/audio-credits"
-                  className="text-sm text-textSecondary dark:text-textSecondary-dark hover:text-primary transition-colors duration-200"
-                >
-                  🎵 Audio Credits
                 </Link>
               </li>
             </ul>
