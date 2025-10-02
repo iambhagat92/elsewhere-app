@@ -148,28 +148,146 @@ export default function BlogPost({ post, relatedPosts }) {
           )}
 
           {/* Content */}
-          <div
-            className="prose prose-xl dark:prose-invert max-w-none
-              prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white prose-headings:tracking-tight
-              prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-12 prose-h1:leading-tight prose-h1:font-extrabold
-              prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-16 prose-h2:border-b-2 prose-h2:border-blue-200 dark:prose-h2:border-blue-800 prose-h2:pb-4
-              prose-h3:text-2xl prose-h3:mb-5 prose-h3:mt-10 prose-h3:font-semibold
-              prose-h4:text-xl prose-h4:mb-4 prose-h4:mt-8 prose-h4:font-semibold
-              prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-p:leading-loose prose-p:mb-8 prose-p:text-lg
-              prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold prose-a:transition-colors
-              prose-strong:text-slate-900 dark:prose-strong:text-white prose-strong:font-bold
-              prose-em:text-slate-600 dark:prose-em:text-slate-400 prose-em:italic
-              prose-code:text-blue-600 dark:prose-code:text-blue-400 prose-code:bg-blue-50 dark:prose-code:bg-blue-900/30 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-base
-              prose-pre:bg-slate-800 prose-pre:text-slate-100 prose-pre:rounded-xl prose-pre:p-6 prose-pre:my-8 prose-pre:shadow-lg
-              prose-ul:text-slate-700 dark:prose-ul:text-slate-300 prose-ul:my-8 prose-ul:space-y-3 prose-ul:text-lg
-              prose-ol:text-slate-700 dark:prose-ol:text-slate-300 prose-ol:my-8 prose-ol:space-y-3 prose-ol:text-lg
-              prose-li:my-3 prose-li:leading-relaxed
-              prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:text-slate-700 dark:prose-blockquote:text-slate-300 prose-blockquote:pl-8 prose-blockquote:py-4 prose-blockquote:my-8 prose-blockquote:italic prose-blockquote:bg-blue-50 dark:prose-blockquote:bg-blue-900/20 prose-blockquote:rounded-r-lg
-              prose-img:rounded-xl prose-img:shadow-2xl prose-img:my-10
-              prose-hr:my-16 prose-hr:border-slate-200 dark:prose-hr:border-slate-700
-              first:prose-p:text-xl first:prose-p:font-medium first:prose-p:text-slate-800 dark:first:prose-p:text-slate-200"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          <div className="blog-content">
+            <style jsx>{`
+              .blog-content {
+                max-width: 65ch;
+                font-size: 1.125rem;
+                line-height: 1.8;
+                color: #334155;
+              }
+              
+              .blog-content :global(p) {
+                margin-bottom: 1.75rem;
+                line-height: 1.9;
+              }
+              
+              .blog-content :global(h2) {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-top: 3.5rem;
+                margin-bottom: 1.5rem;
+                color: #0f172a;
+                border-bottom: 3px solid #3b82f6;
+                padding-bottom: 0.75rem;
+              }
+              
+              .blog-content :global(h3) {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-top: 2.5rem;
+                margin-bottom: 1rem;
+                color: #1e293b;
+              }
+              
+              .blog-content :global(h4) {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-top: 2rem;
+                margin-bottom: 0.75rem;
+                color: #334155;
+              }
+              
+              .blog-content :global(ul),
+              .blog-content :global(ol) {
+                margin: 2rem 0;
+                padding-left: 1.5rem;
+              }
+              
+              .blog-content :global(li) {
+                margin-bottom: 1rem;
+                line-height: 1.8;
+              }
+              
+              .blog-content :global(strong) {
+                font-weight: 700;
+                color: #0f172a;
+              }
+              
+              .blog-content :global(a) {
+                color: #3b82f6;
+                text-decoration: none;
+                font-weight: 600;
+                border-bottom: 2px solid transparent;
+                transition: border-color 0.2s;
+              }
+              
+              .blog-content :global(a:hover) {
+                border-bottom-color: #3b82f6;
+              }
+              
+              .blog-content :global(blockquote) {
+                margin: 2.5rem 0;
+                padding: 1.5rem 2rem;
+                background: #eff6ff;
+                border-left: 4px solid #3b82f6;
+                font-style: italic;
+                border-radius: 0 0.5rem 0.5rem 0;
+              }
+              
+              .blog-content :global(code) {
+                background: #eff6ff;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                font-size: 0.95em;
+                color: #3b82f6;
+                font-family: 'Courier New', monospace;
+              }
+              
+              .blog-content :global(pre) {
+                background: #1e293b;
+                padding: 1.5rem;
+                border-radius: 0.75rem;
+                overflow-x: auto;
+                margin: 2.5rem 0;
+              }
+              
+              .blog-content :global(pre code) {
+                background: none;
+                color: #f1f5f9;
+                padding: 0;
+              }
+              
+              .blog-content :global(hr) {
+                margin: 3rem 0;
+                border: none;
+                border-top: 2px solid #e2e8f0;
+              }
+              
+              /* Dark mode */
+              :global(.dark) .blog-content {
+                color: #cbd5e1;
+              }
+              
+              :global(.dark) .blog-content :global(h2) {
+                color: #f1f5f9;
+                border-bottom-color: #3b82f6;
+              }
+              
+              :global(.dark) .blog-content :global(h3) {
+                color: #e2e8f0;
+              }
+              
+              :global(.dark) .blog-content :global(h4) {
+                color: #cbd5e1;
+              }
+              
+              :global(.dark) .blog-content :global(strong) {
+                color: #f1f5f9;
+              }
+              
+              :global(.dark) .blog-content :global(blockquote) {
+                background: rgba(59, 130, 246, 0.1);
+                color: #cbd5e1;
+              }
+              
+              :global(.dark) .blog-content :global(code) {
+                background: rgba(59, 130, 246, 0.2);
+                color: #93c5fd;
+              }
+            `}</style>
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          </div>
 
           {/* Tags */}
           <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
