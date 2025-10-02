@@ -150,16 +150,22 @@ export default function BlogPost({ post, relatedPosts }) {
           {/* Content */}
           <div
             className="prose prose-lg dark:prose-invert max-w-none
-              prose-headings:text-slate-900 dark:prose-headings:text-white
-              prose-p:text-slate-700 dark:prose-p:text-slate-300
-              prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-slate-900 dark:prose-strong:text-white
-              prose-code:text-blue-600 dark:prose-code:text-blue-400
-              prose-pre:bg-slate-800 prose-pre:text-slate-100
-              prose-ul:text-slate-700 dark:prose-ul:text-slate-300
-              prose-ol:text-slate-700 dark:prose-ol:text-slate-300
-              prose-blockquote:border-blue-500 prose-blockquote:text-slate-700 dark:prose-blockquote:text-slate-300
-              prose-img:rounded-xl prose-img:shadow-lg"
+              prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white prose-headings:tracking-tight
+              prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-8 prose-h1:leading-tight
+              prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:border-b prose-h2:border-slate-200 dark:prose-h2:border-slate-700 prose-h2:pb-3
+              prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8
+              prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-p:leading-relaxed prose-p:mb-6
+              prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold
+              prose-strong:text-slate-900 dark:prose-strong:text-white prose-strong:font-bold
+              prose-em:text-slate-600 dark:prose-em:text-slate-400
+              prose-code:text-blue-600 dark:prose-code:text-blue-400 prose-code:bg-blue-50 dark:prose-code:bg-blue-900/30 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+              prose-pre:bg-slate-800 prose-pre:text-slate-100 prose-pre:rounded-xl prose-pre:p-6 prose-pre:my-6
+              prose-ul:text-slate-700 dark:prose-ul:text-slate-300 prose-ul:my-6 prose-ul:space-y-2
+              prose-ol:text-slate-700 dark:prose-ol:text-slate-300 prose-ol:my-6 prose-ol:space-y-2
+              prose-li:my-2
+              prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:text-slate-700 dark:prose-blockquote:text-slate-300 prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-6 prose-blockquote:italic
+              prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8
+              prose-hr:my-12 prose-hr:border-slate-200 dark:prose-hr:border-slate-700"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
