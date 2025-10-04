@@ -28,7 +28,7 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">1. Acceptance of Terms</h2>
                 <p>
-                  By accessing and using ElseWhere ("the Service"), you accept and agree to be bound by the terms and provisions 
+                  By accessing and using ElseWhere (&quot;the Service&quot;), you accept and agree to be bound by the terms and provisions 
                   of this agreement. If you do not agree to these terms, please do not use the Service.
                 </p>
               </section>
@@ -36,7 +36,7 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">2. Description of Service</h2>
                 <p>
-                  ElseWhere provides free ambient sound experiences from various global locations. The Service is provided "as is" 
+                  ElseWhere provides free ambient sound experiences from various global locations. The Service is provided &quot;as is&quot; 
                   without any warranties, expressed or implied.
                 </p>
               </section>
@@ -52,7 +52,7 @@ export default function TermsOfService() {
                   <li>Using the materials for commercial purposes</li>
                   <li>Attempting to reverse engineer any software contained in the Service</li>
                   <li>Removing any copyright or proprietary notations</li>
-                  <li>Transferring the materials to another person or "mirroring" on another server</li>
+                  <li>Transferring the materials to another person or &quot;mirroring&quot; on another server</li>
                 </ul>
               </section>
 
@@ -81,7 +81,7 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">6. Disclaimer of Warranties</h2>
                 <p>
-                  The Service is provided "as is" and "as available" without warranties of any kind, either express or implied, 
+                  The Service is provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, either express or implied, 
                   including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
                 </p>
               </section>
@@ -114,7 +114,7 @@ export default function TermsOfService() {
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">10. Changes to Terms</h2>
                 <p>
                   We reserve the right to update these Terms of Service at any time. We will notify users of any material 
-                  changes by updating the "Last Updated" date at the top of this page.
+                  changes by updating the &quot;Last Updated&quot; date at the top of this page.
                 </p>
               </section>
 

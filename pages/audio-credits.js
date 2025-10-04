@@ -3,6 +3,8 @@
  * Lists all audio sources and attributions from Freesound.org
  */
 
+import Link from 'next/link';
+
 export default function AudioCredits() {
   const credits = [
     { city: "Tokyo", source: "Freesound.org", license: "Creative Commons" },
@@ -129,13 +131,12 @@ export default function AudioCredits() {
         </div>
 
         {/* Back button */}
-        <div className="text-center mt-8">
-          <a 
+        <div className="text-center mt-8">          <Link 
             href="/"
             className="inline-block text-primary hover:text-blue-400 transition-colors duration-200"
           >
             ← Back to ElseWhere
-          </a>
+          </Link>
         </div>
       </div>
     </div>

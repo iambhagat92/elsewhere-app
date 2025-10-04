@@ -28,7 +28,7 @@ export default function Disclaimer() {
               <section>
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">1. General Information</h2>
                 <p>
-                  The information provided by ElseWhere ("we," "us," or "our") on https://elsewhere.app (the "Site") is for 
+                  The information provided by ElseWhere (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) on https://elsewhere.app (the &quot;Site&quot;) is for 
                   general informational and entertainment purposes only. All information on the Site is provided in good faith, 
                   however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, 
                   validity, reliability, availability, or completeness of any information on the Site.
@@ -80,7 +80,7 @@ export default function Disclaimer() {
               <section>
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">6. No Warranties</h2>
                 <p>
-                  The Service is provided "as is" without warranty of any kind. We do not warrant that:
+                  The Service is provided &quot;as is&quot; without warranty of any kind. We do not warrant that:
                 </p>
                 <ul className="list-disc list-inside ml-4 mt-2 space-y-2">
                   <li>The service will be uninterrupted or error-free</li>
@@ -116,7 +116,7 @@ export default function Disclaimer() {
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">9. Changes to This Disclaimer</h2>
                 <p>
                   We may update this Disclaimer from time to time. We will notify you of any changes by posting the new Disclaimer 
-                  on this page and updating the "Last Updated" date.
+                  on this page and updating the &quot;Last Updated&quot; date.
                 </p>
               </section>
 

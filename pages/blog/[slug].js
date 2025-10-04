@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -133,13 +134,13 @@ export default function BlogPost({ post, relatedPosts }) {
             </div>
           </div>
 
-          {/* Feature Image */}
-          {post.image && post.image.trim() !== '' && (
-            <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
-              <img
+          {/* Feature Image */}          {post.image && post.image.trim() !== '' && (
+            <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative h-96">
+              <Image
                 src={post.image}
                 alt={post.title}
-                className="w-full h-auto"
+                fill
+                className="object-cover"
                 onError={(e) => {
                   e.target.parentElement.style.display = 'none';
                 }}
@@ -382,12 +383,12 @@ export default function BlogPost({ post, relatedPosts }) {
                   href={`/blog/${relatedPost.slug}`}
                   className="group bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700"
                 >
-                  <div className="relative h-40 bg-gradient-to-br from-blue-500 to-indigo-600">
-                    {relatedPost.image && relatedPost.image.trim() !== '' ? (
-                      <img
+                  <div className="relative h-40 bg-gradient-to-br from-blue-500 to-indigo-600">                    {relatedPost.image && relatedPost.image.trim() !== '' ? (
+                      <Image
                         src={relatedPost.image}
                         alt={relatedPost.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-300"
                         onError={(e) => {
                           e.target.style.display = 'none';
                           e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-4xl">🎵</div>';

@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">1. Introduction</h2>
                 <p>
-                  Welcome to ElseWhere ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. 
+                  Welcome to ElseWhere (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We respect your privacy and are committed to protecting your personal data. 
                   This privacy policy explains how we collect, use, and safeguard your information when you use our website.
                 </p>
               </section>
@@ -78,8 +78,8 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">6. Children's Privacy</h2>
                 <p>
-                  Our service is suitable for all ages. Since we don't collect any personal information, there are no 
-                  special concerns regarding children's privacy.
+                  Our service is suitable for all ages. Since we don&apos;t collect any personal information, there are no 
+                  special concerns regarding children&apos;s privacy.
                 </p>
               </section>
 
@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
                 <h2 className="text-2xl font-bold text-textPrimary mt-8 mb-4">7. Changes to This Policy</h2>
                 <p>
                   We may update this privacy policy from time to time. We will notify you of any changes by posting the 
-                  new privacy policy on this page and updating the "Last Updated" date.
+                  new privacy policy on this page and updating the &quot;Last Updated&quot; date.
                 </p>
               </section>
 

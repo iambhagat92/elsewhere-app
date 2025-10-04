@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -93,12 +94,12 @@ export default function BlogIndex({ posts }) {
                 className="group bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400"
               >
                 {/* Feature Image */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-500 to-indigo-600 overflow-hidden">
-                  {post.image && post.image.trim() !== '' ? (
-                    <img
+                <div className="relative h-48 bg-gradient-to-br from-blue-500 to-indigo-600 overflow-hidden">                  {post.image && post.image.trim() !== '' ? (
+                    <Image
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center"><span class="text-6xl">🎵</span></div>';

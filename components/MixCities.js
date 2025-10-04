@@ -227,7 +227,7 @@ export default function MixCities({ isOpen, onClose, onMixChange }) {
         {/* Footer Tip */}
         <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border-t border-gray-200 dark:border-gray-700">
           <p className="text-xs text-center text-textSecondary dark:text-textSecondary-dark">
-            💡 <strong>Pro Tip:</strong> Mix Tokyo's bustling streets with Paris café sounds for a unique work ambiance
+            💡 <strong>Pro Tip:</strong> Mix Tokyo&apos;s bustling streets with Paris café sounds for a unique work ambiance
           </p>
         </div>
       </div>

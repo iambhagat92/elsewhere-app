@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 /**
  * Custom Document for Next.js
@@ -11,7 +12,7 @@ export default function Document() {
         {/* Primary Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <title>ElseWhere - Free Ambient City Sounds for Focus, Study & Relaxation</title>
+
         <meta name="title" content="ElseWhere - Free Ambient City Sounds for Focus, Study & Relaxation" />
         <meta name="description" content="Transport yourself to 30 world cities with authentic ambient sounds. Free background noise for focus, study, work, and meditation. Tokyo, Paris, NYC & more!" />
         <meta name="keywords" content="ambient sounds, city sounds, background noise, study music, focus sounds, white noise, ADHD, productivity, free ambient sounds, concentration music, work from home sounds" />
@@ -44,25 +45,21 @@ export default function Document() {
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#0F172A" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        
-        {/* Google Analytics */}
-        <script
-          async
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />        {/* Google Analytics */}
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5MTRKR5M1L"
+          strategy="afterInteractive"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-5MTRKR5M1L', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
-        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5MTRKR5M1L', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         
         {/* Structured Data for Google */}
         <script
