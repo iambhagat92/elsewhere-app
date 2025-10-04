@@ -45,7 +45,9 @@ export default function Document() {
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#0F172A" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />        {/* Google Analytics */}
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5MTRKR5M1L"
           strategy="afterInteractive"
