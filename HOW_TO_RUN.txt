@@ -2,7 +2,7 @@
    HOW TO RUN YOUR ELSEWHERE APP
 ========================================
 
-SUPER SIMPLE - JUST 2 STEPS:
+🚀 SUPER SIMPLE - JUST 2 STEPS:
 
 Step 1: Double-click this file:
    START_SERVER.bat
@@ -31,14 +31,39 @@ If you see an error:
 
 ========================================
 
-To STOP the server:
-- Close the black window (START_SERVER.bat)
+🛑 TO STOP THE SERVER:
 
-To RESTART:
-- Close the black window
-- Double-click START_SERVER.bat again
-- Wait 10 seconds
-- Double-click OPEN_APP.html
+NEW! Use this file:
+   STOP_SERVER.bat
+   
+This will properly close all servers.
+
+🔄 TO RESTART:
+
+NEW! Use this file:
+   RESTART_SERVER.bat
+   
+This will stop old servers and start fresh.
+
+========================================
+
+🆘 HAVING PROBLEMS?
+
+Check this file:
+   TROUBLESHOOT_GUIDE.md
+   
+Common issues:
+- Server won't stop → Use STOP_SERVER.bat
+- App won't load → Use RESTART_SERVER.bat
+- No audio → Check browser volume
+
+========================================
+
+📱 HINDI/HINGLISH HELP:
+
+"Server band nahi ho raha?" → STOP_SERVER.bat chalao
+"App nahi khul raha?" → RESTART_SERVER.bat chalao
+"Kuch error aa raha hai?" → TROUBLESHOOT_GUIDE.md dekho
 
 ========================================
 
